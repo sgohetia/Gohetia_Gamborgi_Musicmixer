@@ -9,6 +9,7 @@ body {
   justify-content: center;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   height: 100vh;
 }
 .div-con {
@@ -115,7 +116,7 @@ body {
   height: 30px;
   left: 15%;
   top: 29%;
-  background-color: #fff;
+  background-color: #ffffff;
   z-index: 1;
   border-radius: 50%;
 }
@@ -164,5 +165,114 @@ body {
   }
   100% {
     transform: rotateZ(360deg);
+  }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+  .container .controls {
+    width: 400px;
+  }
+}
+
+@media (max-width: 992px) {
+  .nav_menu {
+    flex-direction: column;
+  }
+
+  .nav_link {
+    margin: 5px 0;
+  }
+
+  .container .song-info {
+    padding: 20px 20px 5px 120px;
+  }
+
+  .container .disk .cover {
+    width: 120px;
+    height: 120px;
+  }
+
+  .container .controls {
+    width: 350px;
+    height: 80px;
+  }
+
+  .container .controls i {
+    font-size: 30px;
+    padding: 20px 8px;
+  }
+
+  .container .controls #play {
+    padding: 10px 12px 9px 13px;
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container .song-info {
+    padding: 10px 20px 2px 117px;
+  }
+
+  .container .disk {
+    max-width: 100px;
+  }
+
+  .container .disk .cover {
+    width: 100px;
+    height: 100px;
+  }
+  .container .disk .circle {
+    left: 15%;
+    top: 25%;
+  }
+  .container .controls {
+    width: 300px;
+    height: 70px;
+  }
+
+  .container .controls i {
+    font-size: 25px;
+    padding: 15px 6px;
+  }
+
+  .container .controls #play {
+    padding: 8px 10px;
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .container .song-info {
+    padding: 10px 20px 2px 80px;
+  }
+
+  .container .disk {
+    max-width: 80px;
+  }
+
+  .container .disk .cover {
+    width: 80px;
+    height: 80px;
+  }
+  .container .disk .circle {
+    width: 20px;
+    height: 20px;
+    left: 15%;
+    top: 22%;
+  }
+  .container .controls {
+    width: 250px;
+    height: 60px;
+  }
+
+  .container .controls i {
+    font-size: 20px;
+    padding: 10px 4px;
+  }
+
+  .container .controls #play {
+    padding: 6px 8px;
+    font-size: 18px;
   }
 }
