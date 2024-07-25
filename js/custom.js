@@ -51,7 +51,6 @@
     song.src = src;
     cover.style.backgroundImage = `url(${thumb})`;
   }
-
   function updateProgress() {
     if (song.duration) {
       const pos = (song.currentTime / song.duration) * 100;
