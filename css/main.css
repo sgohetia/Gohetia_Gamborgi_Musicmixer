@@ -1,243 +1,204 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+/* 
+
+---- 1. General Styles
+---- 2. Fonts and Text
+---- 3. Header
+---- 4. Footer
+---- 5. Soundwaves
+---- 6. Music Mixer
+---- 7. Miniplayer
+---- 8. Media Queries for Responsiveness
+
+
+
+--- 1. General Styles --- */
 
 .hidden {
   display: none;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Ubuntu", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
 body {
   text-align: center;
+  background-color: #002342;
   color: black;
-  font-family: sans-serif;
   background-image: url(../images/bg-img.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   background-attachment: fixed;
   margin: 0;
   height: 100vh;
 }
 
-h2 {
-  font-family: "Roboto", sans-serif;
-  font-size: 25px;
-  color: #fff;
+a {
+  transition: all .3s ease-in-out;
+  text-decoration: none;
 }
 
-.top_bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+
+/* --- 2. Fonts and Text --- */
+
+p {
+  font-size: 12px;
+  line-height: 22px;
+  font-family: "Ubuntu", sans-serif;
 }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.ubuntu-light {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.ubuntu-regular {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.ubuntu-medium {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.ubuntu-bold {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.ubuntu-light-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.ubuntu-regular-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.ubuntu-medium-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.ubuntu-bold-italic {
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+
+/* --- 3. Header --- */
+
 .nav_menu {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 25px;
   width: 100%;
-  padding: 10px 10px;
-  background-color: #382c12;
+  padding: 10px;
+  background-color: #002342;
 }
 
 .nav_link {
   color: #fff;
-  text-decoration: none;
-  padding: 10px;
-  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-size: 16px;
 }
+
 .nav_link:hover {
-  color: #e6e211;
+  color: #86c7f7;
 }
+
 .logo {
-  width: 150px;
-  margin: 0 10px;
-}
-.main_board {
-  display: inline-block;
-  text-align: center;
-  justify-content: center;
+  width: 75px;
 }
 
-.play_board {
-  height: 100px;
-  width: 800px;
-  padding: 0px;
+/* --- 4. Footer --- */
+
+footer {
+  background-image: linear-gradient(to top, #002342, #0023426d,#00000000);
+  padding-top: 25px;
+  padding-bottom: 75px;
+}
+
+.footer_div {
   display: flex;
-  justify-content: space-between;
-  margin: 0 auto;
-}
-
-.play_board2 {
-  height: 150px;
-  width: 600px;
-  padding: 0px;
-  display: flex;
-  justify-content: space-around;
-  margin: 0 auto;
-}
-
-.drag_Box {
-  height: 100px;
-  width: 100px;
-  border: 3px solid black;
-  border-radius: 100%;
-  transition: 0.5s;
-  box-shadow: 0 0 15px black;
-  padding: 40px;
-  justify-content: center;
-  transform: rotateX(45deg);
-}
-
-.drag_Box img {
-  margin-left: 5px;
-  border: 4px solid #ffff;
-  border-radius: 50% !important;
-  transition: 0.5s;
-  box-shadow: 0 0 15px yellow !important;
-  height: 100px !important;
-  width: 100px !important;
-  animation-name: spin;
-  animation-duration: 5000ms;
-  animation-iteration-count: infinite;
-  animation-timing-function: linear;
-}
-
-@keyframes spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-#icon_Test1 {
-  transition: 0.5s;
-  box-shadow: 0 0 15px #d68204;
-  border-radius: 100px;
-  height: 80px;
-  width: 80px;
-}
-
-#icon_Test1:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #e6e211;
-  cursor: pointer;
-}
-
-#icon_Test2 {
-  transition: 0.5s;
-  box-shadow: 0 0 15px #d68204;
-  border-radius: 100px;
-  height: 80px;
-  width: 80px;
-}
-
-#icon_Test2:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #e6e211;
-  cursor: pointer;
-}
-
-#icon_Test3 {
-  transition: 0.5s;
-  box-shadow: 0 0 15px #d68204;
-  border-radius: 100px;
-  height: 80px;
-  width: 80px;
-}
-
-#icon_Test3:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #e6e211;
-  cursor: pointer;
-}
-
-#icon_Test4 {
-  transition: 0.5s;
-  box-shadow: 0 0 15px #d68204;
-  border-radius: 100px;
-  height: 80px;
-  width: 80px;
-}
-
-#icon_Test4:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #e6e211;
-  cursor: pointer;
-}
-
-#icon_Test5 {
-  transition: 0.5s;
-  box-shadow: 0 0 15px #d68204;
-  border-radius: 100px;
-  height: 80px;
-  width: 80px;
-}
-
-#icon_Test5:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #e6e211;
-  cursor: pointer;
-}
-
-#icon_Test6 {
-  transition: 0.5s;
-  box-shadow: 0 0 15px #d68204;
-  border-radius: 100px;
-  height: 80px;
-  width: 80px;
-}
-
-#icon_Test6:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #e6e211;
-  cursor: pointer;
-}
-
-.icon_holder {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 50px;
-}
-
-button#refresh:hover {
-  box-shadow: 0 0 15px #e6e211;
-  cursor: pointer;
-}
-
-button#refresh {
-  cursor: pointer;
-  height: 40px;
-  width: 150px;
-  text-align: center;
-  margin-top: 50px;
-  background-color: #091116;
-  font-size: 15px;
-  transition: 0.5s;
-  box-shadow: 0 0 15px #d68204;
-  border-radius: 15px 15px 15px 15px;
+  flex-direction: column;
+  gap: 25px;
+  align-items: center;
   color: white;
 }
 
-footer {
-  margin-top: 150px;
+.footer_title {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 18px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.497);
+  padding-bottom: 25px;
 }
+
+.footer_info {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.logo_footer {
+  width: 75px;
+  background-color: #0023429a;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.45);
+  border-radius: 100%;
+}
+
+
+/* --- 5. Soundwaves --- */
 
 .soundwave-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
-  width: 600px;
-  margin: 20px auto 0;
-  border: 3px solid #fff;
+  height: 80px;
+  width: 50vw;
+  padding: 15px;
+  margin: 40px auto 0;
   border-radius: 50px;
+  border: 5px rgba(255, 255, 255, 0.743) groove;
   box-sizing: border-box;
-  box-shadow: 0 0 5px #d68204;
+  background-color: #00234288;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.45);
 }
+
 .soundwave {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100px;
+  height: 50px;
   width: 100%;
   margin: 0 auto;
 }
@@ -245,7 +206,7 @@ footer {
 .soundwave div {
   width: 5px;
   height: 30px;
-  background: #fff;
+  background: #86c7f7;
   margin: 0 2px;
   animation: sound 0.5s infinite;
 }
@@ -268,67 +229,199 @@ footer {
 
 @keyframes sound {
   0% {
-    height: 30px;
+    height: 30%;
   }
   50% {
-    height: 70px;
+    height: 70%;
   }
   100% {
-    height: 30px;
+    height: 30%;
   }
 }
 
-/* Media Queries for Responsiveness */
-@media (max-width: 1200px) {
-  .play_board {
-    width: 90%;
-  }
+/* --- 6. Music Mixer --- */
 
-  .play_board2 {
-    width: 90%;
+.main_board {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.play_board {
+  height: 100px;
+  width: 800px;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  margin: 0 auto;
+}
+
+.play_board2 {
+  height: 175px;
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 25px;
+  margin: 25px auto 0;
+}
+
+.drag_Box {
+  height: 100px;
+  width: 100px;
+  border: 3px solid white;
+  background-color: #002342c3;
+  border-radius: 100%;
+  transition: 0.5s;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  justify-content: center;
+  transform: rotateX(45deg);
+  margin-top: 20px;
+}
+
+.drag_Box img {
+  margin-left: -11px;
+  margin-top: -11px;
+  border-radius: 50% !important;
+  transition: 0.5s;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.45) !important;
+  height: 125px !important;
+  width: 125px !important;
+  animation-name: spin;
+  animation-duration: 5000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }
 
-@media (max-width: 992px) {
-  .play_board {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
 
-  .play_board2 {
-    flex-direction: column;
-    align-items: center;
-    height: auto;
-  }
+
+#icon_Test1, #icon_Test2, #icon_Test3, #icon_Test4, #icon_Test5, #icon_Test6 {
+  transition: 0.5s;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.45);
+  border-radius: 100px;
+  height: 80px;
+  width: 80px;
+}
+
+#icon_Test1:hover, #icon_Test2:hover, #icon_Test3:hover, #icon_Test4:hover, #icon_Test5:hover, #icon_Test6:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px yellow;
+  cursor: pointer;
+}
+
+.moving_icons {
+  background-color: #86c8f771;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.45);
+  margin-top: 50px;
+  padding: 25px;
+  border-radius: 50px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.icon_holder {
+  display: flex;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+button#refresh {
+  cursor: pointer;
+  width: 300px;
+  text-align: center;
+  padding: 10px 0;
+  margin-top: 40px;
+  font-size: 16px;
+  transition: 0.5s;
+  background-color: #86c8f771;
+  color: #002342;
+  text-transform: uppercase;
+  font-weight: 700;
+  box-shadow: 0 2px 5px 1px rgba(0, 0, 0, 0.45);
+  border-radius: 50px;
+}
+
+button#refresh:hover {
+  background-color: #86c7f7;
+  box-shadow: 0 0 15px #002342;
+  color: #002342;
+}
+
+.instructions {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  border-radius: 25px;
+  width: 250px;
+  background-color: #002342af;
+  border: #8cc7f7 ridge 2px;
+  color: #86c7f7;
+  padding: 25px;
+}
+
+.instructions h5 {
+  font-weight: 400;
+  line-height: 1.75;
+}
+
+
+/* --- 7. Miniplayer --- */
+
+/*  */
+
+
+
+/* --- 8. Media Queries for Responsiveness --- */
+
+/* --- Breakpoint 992px --- */
+
+@media (max-width: 972px) {
 
   .drag_Box {
-    margin: 10px 0;
+    height: 70px;
+    width: 70px;
   }
 
-  .soundwave-container {
-    width: 90%;
+  .drag_Box img {
+    margin-left: -26px;
+    margin-top: -25px;
+  }
+
+  .play_board2 {
+    height: 150px;
   }
 }
+
+/* --- Breakpoint 768px --- */
 
 @media (max-width: 768px) {
   .icon_holder {
-    flex-direction: column;
-    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 
-  .icon_holder div {
-    margin: 10px 0;
-  }
-
-  .nav_menu {
-    flex-direction: column;
-  }
-
-  .nav_link {
-    margin: 5px 0;
+  .play_board2 {
+    height: 140px;
   }
 }
+
+/* --- Breakpoint 576px --- */
 
 @media (max-width: 576px) {
   h2 {
@@ -336,31 +429,22 @@ footer {
   }
 
   .drag_Box {
-    height: 80px;
-    width: 80px;
-    padding: 20px;
+    height: 100px;
+    width: 100px;
+    padding: 15px;
   }
 
   .drag_Box img {
-    height: 80px;
-    width: 80px;
+    margin-top: -12px;
+    margin-left: -12px;
   }
 
-  .play_board,
+  .play_board {
+    gap: 15px;
+  }
+
   .play_board2 {
-    width: 100%;
+    gap: 15px;
   }
 
-  .soundwave-container {
-    width: 100%;
-  }
-
-  .soundwave {
-    height: 80px;
-  }
-
-  .soundwave div {
-    width: 3px;
-    height: 20px;
-  }
 }

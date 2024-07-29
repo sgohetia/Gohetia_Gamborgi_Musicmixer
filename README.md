@@ -1,5 +1,3 @@
-![H&S_logo](images/ourlogo.png)
-
 # Music Mixer Assignment
 
 ##### Sheldon Gohetia & Henrique Gamborgi Menezes
