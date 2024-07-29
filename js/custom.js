@@ -1,5 +1,7 @@
 (() => {
-  console.log("Connected!"); //This means that our JS connection is okay.
+  console.log("Connected!"); // This means that our JS connection is okay.
+
+  // VARIABLES
   const songsList = [
     {
       name: "Misery Business",
@@ -19,7 +21,7 @@
       src: "audio/3.mp3",
       cover: "images/chrisD.jpg",
     },
-    //Add more songs here brotha!
+    // Add more songs here!
   ];
 
   const artistName = document.querySelector(".artist-name");
@@ -36,14 +38,7 @@
   let currentSong = 0;
   let playing = false;
 
-  loadSong(currentSong);
-  song.addEventListener("timeupdate", updateProgress);
-  song.addEventListener("ended", nextSong);
-  prevBtn.addEventListener("click", prevSong);
-  nextBtn.addEventListener("click", nextSong);
-  playBtn.addEventListener("click", togglePlayPause);
-  prog.addEventListener("click", seek);
-
+  // FUNCTIONS
   function loadSong(index) {
     const { name, artist, src, cover: thumb } = songsList[index];
     artistName.innerText = artist;
@@ -51,6 +46,7 @@
     song.src = src;
     cover.style.backgroundImage = `url(${thumb})`;
   }
+
   function updateProgress() {
     if (song.duration) {
       const pos = (song.currentTime / song.duration) * 100;
@@ -103,4 +99,15 @@
     const pos = (e.offsetX / prog.clientWidth) * song.duration;
     song.currentTime = pos;
   }
+
+  // EVENT LISTENERS
+  song.addEventListener("timeupdate", updateProgress);
+  song.addEventListener("ended", nextSong);
+  prevBtn.addEventListener("click", prevSong);
+  nextBtn.addEventListener("click", nextSong);
+  playBtn.addEventListener("click", togglePlayPause);
+  prog.addEventListener("click", seek);
+
+  // Initialize the player
+  loadSong(currentSong);
 })();
