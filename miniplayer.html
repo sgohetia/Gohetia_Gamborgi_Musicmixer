@@ -1,49 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <!-- Head of the Document -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <link rel="stylesheet" href="css/custom.css" />
-    <title>Henry and Sheldon | Music Mixer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Document Title -->
+    <title>Miniplayer: Sheldon &amp; Henrique </title>
   </head>
 
+  <!-- Body -->
   <body>
+    <h1 class="hidden">Miniplayer: Sheldon &amp; Henrique</h1>
+
+    <!-- Header -->
     <header>
+      <h2 class="hidden">Header</h2>
       <div class="top_bar">
         <nav class="nav_menu">
-          <a href="index.html" class="nav_link">Mixer</a>
-          <img src="images/ourlogo.png" alt="H&S logo" class="logo" />
-          <a href="#" class="nav_link">Mini Player</a>
+          <h3 class="hidden">Header Navigation</h3>
+          <a href="./index.html" class="nav_link"><h4>Mixer</h4></a>
+          <img src="images/ourlogo.png" alt="Music Mixer Logo" class="logo"/>
+          <a href="./miniplayer.html" class="nav_link"><h4>Miniplayer</h4></a>
         </nav>
       </div>
     </header>
-    <br />
-    <div class="div-con">
-      <div class="container">
-        <div class="song-info">
-          <div class="artist-name"></div>
-          <div class="song-name"></div>
-          <div class="progress-bar">
-            <div class="fill-bar"></div>
+
+    <!-- Main Content -->
+    <main>
+      <h2 class="hidden">Main Content</h2>
+
+      <!-- Miniplayer -->
+      <div class="div-con">
+        <h3 class="hidden">Miniplayer</h3>
+
+        <!-- Player Container -->
+        <div class="container">
+          <h4 class="hidden">Player Container</h4>
+
+          <!-- Song Information -->
+          <div class="song-info">
+            <h5 class="hidden">Song Information</h5>
+            
+            <div class="artist-name"></div>
+            <div class="song-name"></div>
+            <div class="progress-bar">
+              <div class="fill-bar"></div>
+            </div>
+            <div class="time">0:00 - 0:00</div>
+
           </div>
-          <div class="time">0:00 - 0:00</div>
-        </div>
-        <div class="disk">
-          <div class="circle"></div>
-          <div id="cover" class="cover"></div>
-        </div>
-        <div class="controls">
-          <i id="prev" class="prev-btn fa-solid fa-backward"></i>
-          <i id="play" class="play-btn fa-solid fa-play"></i>
-          <i id="next" class="next-btn fa-solid fa-forward"></i>
+
+          <!-- Song Cover -->
+          <div class="disk">
+            <h5 class="hidden">Album Cover</h5>
+            <div class="circle"></div>
+            <div id="cover" class="cover"></div>
+          </div>
+
+          <!-- Player Controls -->
+          <div class="controls">
+            <h5 class="hidden">Player Controls</h5>
+            <i id="prev" class="prev-btn fa-solid fa-backward"></i>
+            <i id="play" class="play-btn fa-solid fa-play"></i>
+            <i id="next" class="next-btn fa-solid fa-forward"></i>
+          </div>
         </div>
       </div>
-    </div>
+
+      <!-- Footer -->
+      <footer>
+        <h3 class="hidden">Footer</h3>
+      </footer>
+      
+    </main>
+
+    
     <script src="js/custom.js"></script>
   </body>
 </html>
