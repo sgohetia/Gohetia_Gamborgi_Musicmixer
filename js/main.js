@@ -56,8 +56,6 @@
       myAudio.src = targetAudio;
       myAudio.loop = "true";
       document.body.appendChild(myAudio);
-      // myAudio.loop = "true";
-      // document.body.appendChild(myAudio);
       myAudio.play();
 
       soundwave.style.display = "flex"; // Show the soundwave
