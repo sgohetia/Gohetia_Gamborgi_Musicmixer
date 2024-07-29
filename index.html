@@ -1,110 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
+
+  <!-- Head of the Document -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
     <link rel="stylesheet" href="css/main.css" />
-    <title>Henry and Sheldon | Music Mixer</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=DM+Serif+Display:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap" rel="stylesheet">
+
+    <!-- Document Title -->
+    <title>Music Mixer: Sheldon &amp; Henrique </title>
   </head>
+
+  <!-- Body -->
   <body>
+    <h1 class="hidden">Music Mixer: Sheldon &amp; Henrique</h1>
+    
+    <!-- Header -->
     <header>
+      <h2 class="hidden">Header</h2>
       <div class="top_bar">
         <nav class="nav_menu">
-          <a href="#" class="nav_link">Mixer</a>
-          <img src="images/ourlogo.png" alt="H&S logo" class="logo" />
-          <a href="miniplayer.html" class="nav_link">Mini Player</a>
+          <h3 class="hidden">Header Navigation</h3>
+          <a href="./index.html" class="nav_link"><h4>Mixer</h4></a>
+          <img src="images/ourlogo.png" alt="Music Mixer Logo" class="logo"/>
+          <a href="./miniplayer.html" class="nav_link"><h4>Miniplayer</h4></a>
         </nav>
-        <div class="soundwave-container">
-          <div class="soundwave" id="soundwave">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-          </div>
-        </div>
       </div>
     </header>
-    <br />
-    <div class="main_board">
-      <div class="play_board">
-        <div class="drag_Box"></div>
-        <div class="drag_Box"></div>
-        <div class="drag_Box"></div>
+
+    <!-- Main Content -->
+    <main>
+      <h2 class="hidden">Main Content</h2>
+
+      <!-- Soundwave Container -->
+      <div class="soundwave-container">
+        <h3 class="hidden">Soundwave Container</h3>
+
+        <!-- Soundwaves -->
+        <div class="soundwave" id="soundwave">
+          <h4 class="hidden">Soundwaves</h4>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
       </div>
-      <div class="play_board2">
-        <div class="drag_Box"></div>
-        <div class="drag_Box"></div>
-      </div>
-      <div class="moving_icons">
-        <div class="icon_holder">
-          <div class="icon1">
-            <img
-              id="icon_Test1"
-              data-audio="audio/sound_bass01.28.44.mp3"
-              src="images/sound_iconBass.svg"
-              alt="icon_Test"
-              draggable="true"
-            />
+
+      <!-- Main Board -->
+      <section class="main_board">
+        <h3 class="hidden">Main Board</h3>
+
+        <!-- Drag Zone -->
+        <div>
+          <h4 class="hidden">Drag Zone</h4>
+
+          <div class="play_board">
+            <h5 class="hidden">Drag Zone: line 1</h5>
+            <div class="drag_Box"></div>
+            <div class="drag_Box"></div>
+            <div class="drag_Box"></div>
           </div>
-          <div class="icon2">
-            <img
-              id="icon_Test2"
-              data-audio="audio/sound_drums01.28.44.mp3"
-              src="images/sound_iconDrums.svg"
-              alt="icon_Drums"
-              draggable="true"
-            />
-          </div>
-          <div class="icon3">
-            <img
-              id="icon_Test3"
-              data-audio="audio/sound_guitar01.28.44.mp3"
-              src="images/sound_iconGuitar.svg"
-              alt="icon_Guitar"
-              draggable="true"
-            />
-          </div>
-          <div class="icon4">
-            <img
-              id="icon_Test4"
-              data-audio="audio/sound_strings01.28.44.mp3"
-              src="images/sound_iconStrings.svg"
-              alt="icon_Strings"
-              draggable="true"
-            />
-          </div>
-          <div class="icon5">
-            <img
-              id="icon_Test5"
-              data-audio="audio/sound_synth01.28.44.mp3"
-              src="images/sound_iconSynths.svg"
-              alt="icon_Synths"
-              draggable="true"
-            />
-          </div>
-          <div class="icon6">
-            <img
-              id="icon_Test6"
-              data-audio="audio/sound_vocals01.28.44.mp3"
-              src="images/sound_iconVocals.svg"
-              alt="icon_Vocals"
-              draggable="true"
-            />
+          <div class="play_board2">
+            <h5 class="hidden">Drag Zone: line 2</h5>
+            <div class="drag_Box"></div>
+            <div class="drag_Box"></div>
           </div>
         </div>
-        <h2>Click and drag icons below, then place above to play.</h2>
+
+        <!-- Moving Icons --> 
+        <div class="moving_icons">
+          <h4 class="hidden">Audio Icons</h4>
+
+          <div class="icon_holder">
+            <h5 class="hidden">Icons Container</h5>
+
+            <div class="icon1">
+              <!-- Icon 1: Bass -->
+               <h6 class="hidden">Bass Sound Icon</h6>
+              <img
+                id="icon_Test1"
+                data-audio="audio/sound_bass01.28.44.mp3"
+                src="images/sound_iconBass.svg"
+                alt="Bass Icon"
+                draggable="true"
+              />
+            </div>
+
+            <div class="icon2">
+              <!-- Icon 2: Drums -->
+              <h6 class="hidden">Drums Sound Icon</h6>
+              <img
+                id="icon_Test2"
+                data-audio="audio/sound_drums01.28.44.mp3"
+                src="images/sound_iconDrums.svg"
+                alt="Drums Icon"
+                draggable="true"
+              />
+            </div>
+
+            <div class="icon3">
+              <!-- Icon 3: Guitar -->
+              <h6 class="hidden">Guitar Sound Icon</h6>
+              <img
+                id="icon_Test3"
+                data-audio="audio/sound_guitar01.28.44.mp3"
+                src="images/sound_iconGuitar.svg"
+                alt="Guitar Icon"
+                draggable="true"
+              />
+            </div>
+
+            <div class="icon4">
+              <!-- Icon 4: Strings -->
+              <h6 class="hidden">Strings Sound Icon</h6>
+              <img
+                id="icon_Test4"
+                data-audio="audio/sound_strings01.28.44.mp3"
+                src="images/sound_iconStrings.svg"
+                alt="Strings Icon"
+                draggable="true"
+              />
+            </div>
+
+            <div class="icon5">
+              <!-- Icon 5: Synthesizers -->
+              <h6 class="hidden">Synthesizers Sound Icon</h6>
+              <img
+                id="icon_Test5"
+                data-audio="audio/sound_synth01.28.44.mp3"
+                src="images/sound_iconSynths.svg"
+                alt="Synthesizers Icon"
+                draggable="true"
+              />
+            </div>
+
+            <div class="icon6">
+              <!-- Icon 6: Vocals -->
+               <h6 class="hidden">Vocals Sound Icon</h6>
+              <img
+                id="icon_Test6"
+                data-audio="audio/sound_vocals01.28.44.mp3"
+                src="images/sound_iconVocals.svg"
+                alt="Vocals Icon"
+                draggable="true"
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Reset Button -->
         <div class="reset_Button">
-          <button id="refresh" onclick="location=URL">RESET</button>
+          <h4 class="hidden">Reset button</h4>
+          <button id="refresh" onclick="location=URL">Reset</button>
         </div>
-      </div>
-      <footer></footer>
-    </div>
+
+        <!-- Instructions -->
+        <div class="instructions">
+          <h4 class="hidden">Mixer Instructions</h4>
+          <h5>Click and drag the icons above inside the empty circles to build your own music!</h5>
+        </div>
+      </section>
+
+      <!-- Footer -->
+      <footer>
+        <h3 class="hidden">Footer</h3>
+      </footer>
+      
+    </main>
+
     <script src="js/main.js"></script>
   </body>
 </html>
