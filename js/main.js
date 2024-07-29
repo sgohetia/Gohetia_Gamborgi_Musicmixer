@@ -1,9 +1,10 @@
 (() => {
   console.log("Connected!"); //This means that our JS connection is okay.
 
-  (icon_holder = document.querySelectorAll(".icon_holder")),
-    (draggablePieces = document.querySelectorAll(".icon_holder img")),
-    (dropZones = document.querySelectorAll(".drag_Box"));
+  const iconHolder = document.querySelector(".icon_holder");
+  const draggablePieces = document.querySelectorAll(".icon_holder img");
+  const dropZones = document.querySelectorAll(".drag_Box");
+  const resetButton = document.querySelector("#refresh");
 
   document.addEventListener("dragover", function (ev) {
     ev.preventDefault();
@@ -24,6 +25,7 @@
     },
     false
   );
+
   window.addEventListener(
     "drop",
     function (ev) {
@@ -31,19 +33,23 @@
     },
     false
   );
+
   dropZones.forEach((zone) => {
     zone.addEventListener("dragover", function (ev) {
       ev.preventDefault();
     });
+
     //This means that you dropped a track on this zone
     zone.addEventListener("drop", function (ev) {
       ev.preventDefault();
       console.log("you dropped a track on me");
+
       //This prevents you from dropping track when there is already a track.
       if (this.childElementCount > 0) {
         console.log("one track only please!");
         return;
       }
+
       console.log(ev.dataTransfer.getData("img"));
 
       let targetAudio = document.querySelector(
@@ -68,5 +74,27 @@
       ev.target.appendChild(document.querySelector(`#${data}`));
     });
   });
+
   soundwave.style.display = "none";
+
+  resetButton.addEventListener("click", function () {
+    console.log("Resetting...");
+
+    // Move all icons back to the original icon holder
+    dropZones.forEach((zone) => {
+      while (zone.firstChild) {
+        iconHolder.appendChild(zone.lastChild);
+      }
+    });
+
+    // Stop all playing audios and remove them
+    const audios = document.querySelectorAll("audio");
+    audios.forEach((audio) => {
+      audio.pause();
+      audio.remove();
+    });
+
+    // Hide the soundwave
+    soundwave.style.display = "none";
+  });
 })();
