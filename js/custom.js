@@ -10,18 +10,35 @@
       cover: "images/paramore.jpg",
     },
     {
-      name: "Take Me Home Country Road",
+      name: "Take Me Home Country Roads",
       artist: "John Denver",
       src: "audio/2.mp3",
       cover: "images/johnD.jpg",
     },
     {
-      name: "Bring Me to Life",
+      name: "Bring Me To Life",
       artist: "Chris Daughtry",
       src: "audio/3.mp3",
       cover: "images/chrisD.jpg",
     },
-    // Add more songs here!
+    {
+      name: "Billie Bossa Nova",
+      artist: "Billie Eilish",
+      src: "audio/4.mp3",
+      cover: "images/billie.jpg",
+    },
+    {
+      name: "Two Suns In The Sunset",
+      artist: "Pink Floyd",
+      src: "audio/5.mp3",
+      cover: "images/pinkFloyd.jpg",
+    },
+    {
+      name: "Rocketman",
+      artist: "Elton John",
+      src: "audio/6.mp3",
+      cover: "images/elton.jpg",
+    },
   ];
 
   const artistName = document.querySelector(".artist-name");

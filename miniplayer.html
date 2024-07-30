@@ -9,7 +9,7 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
-    <link rel="stylesheet" href="css/custom.css" />
+    <link rel="stylesheet" href="css/main.css" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,18 +21,22 @@
   </head>
 
   <!-- Body -->
-  <body>
+  <body class="body_miniplayer">
     <h1 class="hidden">Miniplayer: Sheldon &amp; Henrique</h1>
 
-    <!-- Header -->
-    <header>
+     <!-- Header -->
+     <header>
       <h2 class="hidden">Header</h2>
       <div class="top_bar">
         <nav class="nav_menu">
           <h3 class="hidden">Header Navigation</h3>
           <a href="./index.html" class="nav_link"><h4>Mixer</h4></a>
-          <img src="images/ourlogo.png" alt="Music Mixer Logo" class="logo"/>
-          <a href="./miniplayer.html" class="nav_link"><h4>Miniplayer</h4></a>
+          <img
+            src="images/logo_white.svg"
+            alt="Music Mixer Logo"
+            class="logo"
+          />
+          <a href="./miniplayer.html" class="nav_link"><h4 class="link-active">Player</h4></a>
         </nav>
       </div>
     </header>
@@ -79,14 +83,25 @@
         </div>
       </div>
 
-      <!-- Footer -->
-      <footer>
-        <h3 class="hidden">Footer</h3>
-      </footer>
+    <!-- Footer -->
+    <footer>
+      <h3 class="hidden">Footer</h3>
+      <div class="footer_div">
+        <img
+          src="images/logo_white.svg"
+          alt="Music Mixer Logo"
+          class="logo_footer"
+        />
+        <h4 class="footer_title">Music Mixer Assignment &copy; 2024</h4>
+        <h5 class="footer_info">
+          Henrique Gamborgi Menezes &amp; Sheldon Gohetia
+        </h5>
+        <h5 class="footer_info">Multimedia Authoring 2, Fanshawe College</h5>
+      </div>
+    </footer>
       
     </main>
 
-    
     <script src="js/custom.js"></script>
   </body>
 </html>
